@@ -1,23 +1,81 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
 
-<link href="flash.css" type="text/css" rel="stylesheet"></link>
-    <script type="text/javascript" src="jquery-1.4.2.js"></script>
-    <script type="text/javascript" src="flash.js"></script>
-    
-<title>Documento sin título</title>
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
 </head>
-
 <body>
-
-<div class="wlby_movie">
-      <img src="flash_assets/svgblock_0.svg" class="wlby_1"></img>
-      <img src="flash_assets/svgblock_1.svg" class="wlby_2"></img>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/01.jpg" width="100%"></div>
+            <div class="swiper-slide"><img src="img/02.jpg" width="100%" ></div>
+            <div class="swiper-slide"><img src="img/03.jpg" width="100%" ></div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
     </div>
+    
 
+    <!-- Swiper JS -->
+    <script src="dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>
 </body>
 </html>
